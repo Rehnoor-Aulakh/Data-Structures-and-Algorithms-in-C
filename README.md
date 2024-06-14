@@ -1,1 +1,3 @@
 # Data-Structures-and-Algorithms-in-C
+
+This repository contains the material required for the understanding of Data Structures and Algorithms in C language. Often we read from books and other websites where just the function is given but we do not know how to call it and often get confused in pointers and address, call by value and call by reference. While in my repository, I have made a single file for a single topic which will contain all the necessary functions and the main function and print function telling you how to pass arguments to it and access values from one function to another giving detailed knowledge of call by value and call by reference.
