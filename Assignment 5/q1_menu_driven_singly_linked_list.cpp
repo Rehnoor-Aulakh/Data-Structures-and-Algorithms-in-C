@@ -61,6 +61,7 @@ class LinkedList
         temp->next=nnode;
         nnode->next=t;
         cout<<data<<" inserted before "<<pos<<endl;
+        size++;
     }
     void deleteFromBeginning()
     {
@@ -69,6 +70,7 @@ class LinkedList
         start=start->next;
         delete(temp);
         cout<<"Deleted First Node "<<val<<" Successfully!!!"<<endl;
+        size--;
     }
     void deleteFromEnd()
     {
@@ -81,6 +83,7 @@ class LinkedList
         t->next=NULL;
         cout<<temp->val<<" Deleted from End Successfully!!!"<<endl;
         delete(temp);
+        size--;
     }
     void deleteNode(int data)
     {
@@ -97,6 +100,7 @@ class LinkedList
         Node *t=temp->next->next;
         delete(temp->next);
         temp->next=t;
+        size--;
     }
     void search(int data)
     {
