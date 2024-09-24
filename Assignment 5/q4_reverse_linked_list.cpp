@@ -153,24 +153,17 @@ int main()
         //Return as it is
         return 0;
     }
-    //Create three pointers, prev which points to start, curr which points to prev->next and next which points to curr->next
-    //We will iterate the linked list and go on assigning curr->next to prev so that all the links get reversed until next becomes null.
-    //Assign the start to current node
-    Node *prev=ll.start;
-    Node *curr=prev->next;
-    Node *next=curr->next;
-    prev->next=NULL;
-    //prev->next should be made before looping because if this link exists, then after reversing, there would be an infinite loop because first element's next points to second element and second element's next points to first element
-    while(next!=NULL)
+    
+    Node *preNode=NULL;
+    Node *currNode=ll.start;
+    while(currNode!=NULL)
     {
-        curr->next=prev;
-        prev=curr;
-        curr=next;
-        next=next->next;  
+        Node *nextNode=currNode->next;
+        currNode->next=preNode;
+        preNode=currNode;
+        currNode=nextNode;
     }
-    //After next becomes NULL, one step is left to assign curr->next to prev 
-    curr->next=prev;
-    ll.start=curr;
+    ll.start=preNode;
     ll.display();
 
 }
