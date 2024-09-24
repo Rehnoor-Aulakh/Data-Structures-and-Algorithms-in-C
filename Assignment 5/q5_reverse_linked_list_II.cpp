@@ -1,10 +1,16 @@
 //https://www.interviewbit.com/problems/reverse-link-list-ii/
 //https://leetcode.com/problems/reverse-linked-list-ii/
 
-class Solution {
-public:
-    ListNode* reverseBetween(ListNode* head, int left, int right) 
-    {
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+ListNode* Solution::reverseBetween(ListNode* head, int left, int right) 
+{
         if (head == nullptr || left == right) {
             // If the list is empty or no need to reverse since left == right
             return head;
@@ -46,4 +52,3 @@ public:
         // Step 5: Return the new head of the list (handle the case where the head might have changed)
         return dummy->next;
     }
-};
