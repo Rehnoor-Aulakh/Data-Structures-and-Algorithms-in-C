@@ -10,10 +10,10 @@ class queue
     int capacity;
     queue(int capacity)
     {
-        arr=new int[capacity];
+        arr=new int[capacity+1];
         front=-1;
         rear=-1;
-        this->capacity=capacity;
+        this->capacity=capacity+1;
         size=0;
         cout<<"Queue Created Successfully!!!"<<endl;
     }
